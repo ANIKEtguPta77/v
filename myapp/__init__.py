@@ -140,54 +140,7 @@ def create_app():
         
         
         
-        
-        @app.route('/Sheet',methods=["POST","GET"])
-        def in_sheet():
-#             csv="D:/project/vahsist_project/project/static/files/NEW.csv"
-#             data=pandas.read_csv(csv)
-#             data=data.to_dict()
-#             rollno=data["RollNo"][0]
-#             date=data["Date"][0]
-#             date=date.replace("-","")
-#             response=requests.get(url=f"{SHEET_API_CSE}")
-#             data=response.json()
-#             data=data["sheet1"]
-#             c=0            
-#             for entry in data:
-#                 if entry["rollno"]==rollno:
-#                     id=entry["id"]
-#                     c=1
-                    
-#             if c==0:
-#                 response=requests.get(url=f"{SHEET_API_ECE}")
-#                 data=response.json()
-#                 data=data["sheet1"]
-#                 for entry in data:
-#                     if entry["rollno"]==rollno:
-#                         id=entry["id"]
-#                         c=0
-                
-                        
-                            
-#             sheet_inputs={
-#                         'sheet1':{
-
-#                     date:'P'
-                
-#                     }
-#                     }
-
-#             if c==1:
-#                 response=requests.put(url=f"{SHEET_API_CSE}/{id}",json=sheet_inputs) 
-#             else:
-#                 response=requests.put(url=f"{SHEET_API_ECE}/{id}",json=sheet_inputs)    
-#             return jsonify(response={"Success":"Changed in sheet"})     
-
-            
-            
-        
-
-
+       
         @app.route('/teacher_portal_login',methods=["POST","GET"])
         def teacher_portal():
             if request.method=="POST":
